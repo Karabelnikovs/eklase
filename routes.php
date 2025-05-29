@@ -23,11 +23,30 @@ return [
   // '/products/destroy/(:num)' => 'ProductsController@destroy',
 
   //auth
+  // routes.php
+  '/create-student' => 'StudentsController@store',
+
   '/login' => 'AuthController@login',
   '/register' => 'AuthController@register',
   '/logout' => 'AuthController@logout',
   '/authenticate' => 'AuthController@authenticate',
   '/registerUser' => 'AuthController@registerUser',
+
+  '/students' => 'UsersController@index',
+  '/students/create' => 'UsersController@create',
+  '/students/store' => 'UsersController@store',
+  '/profile' => 'UsersController@profile',
+  '/upload-avatar' => 'UsersController@uploadAvatar',
+
+  '/' => 'DashboardController@index',
+
+  '/grades' => 'GradesController@index',
+  '/grades/create' => 'GradesController@create',
+  '/grades/store' => 'GradesController@store',
+  '/my-grades' => 'GradesController@studentGrades',
+
+  '/subjects' => 'SubjectsController@index',
+  '/subjects/create' => 'SubjectsController@store',
 
   //   //users
 //   '/users' => 'UsersController@index',

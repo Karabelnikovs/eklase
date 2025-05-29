@@ -123,31 +123,47 @@
                             <i class="lni lni-menu"></i>
                         </button>
 
+
                         <nav id="navbarMenu"
                             class="ic-navbar-collapse absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
-                            <ul class="block lg:flex" role="menu" aria-label="Navigation menu">
-
+                            <ul class="block lg:flex gap-4" role="menu" aria-label="Navigation menu">
                                 <li class="group relative">
-                                    <a href="#home"
-                                        class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 active"
-                                        role="menuitem">test</a>
+                                    <a href="/" role="menuitem"
+                                        class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Home</a>
                                 </li>
-
+                                <?php if (Validator::Role('Teacher') || Validator::Role('Admin')): ?>
+                                    <li class="group relative">
+                                        <a href="/students" role="menuitem"
+                                            class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Students</a>
+                                    </li>
+                                    <li class="group relative">
+                                        <a href="/grades" role="menuitem"
+                                            class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Grades</a>
+                                    </li>
+                                    <li class="group relative">
+                                        <a href="/subjects" role="menuitem"
+                                            class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Subjects</a>
+                                    <?php endif; ?>
+                                    <?php if (Validator::Role('Student')): ?>
+                                    <li class="group relative">
+                                        <a href="/my-grades" role="menuitem"
+                                            class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">My
+                                            Grades</a>
+                                    </li>
+                                <?php endif; ?>
                                 <li class="group relative">
-                                    <a href="#services"
-                                        class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                                        role="menuitem">samaini</a>
+                                    <a href="/profile" role="menuitem"
+                                        class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Profile</a>
                                 </li>
-
                                 <li class="group relative">
-                                    <a href="#portfolio"
-                                        class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                                        role="menuitem">type shi</a>
+                                    <a href="/logout" role="menuitem"
+                                        class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Logout</a>
                                 </li>
-
-
                             </ul>
                         </nav>
+
+
+
                     </div>
                     <div class="flex items-center justify-end pr-[52px] lg:pr-0">
                         <button type="button" class="inline-flex items-center text-primary-color text-[24px]/none"
@@ -155,7 +171,7 @@
                         <div class="hidden sm:flex">
                             <a href="javascript:void(0)"
                                 class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
-                                role="button">Yo poga</a>
+                                role="button"> poga</a>
                         </div>
                     </div>
                 </div>
@@ -169,7 +185,7 @@
             class="relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]">
             <div class="container">
                 <div class="-mx-5 flex flex-wrap items-center">
-                    <div class="w-full px-5">
+                    <div class="w-full px-5 min-h-[300px] lg:w-1/2 lg:min-h-[400px] pb-8">
                         <?= $content ?? '' ?>
 
                     </div>

@@ -22,16 +22,16 @@ abstract class Model
         return $records ?: [];
     }
 
-    public static function register($name, $email, $password)
+    public static function register($first_name, $last_name, $email, $password)
     {
         self::init();
 
 
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO " . static::getTableName() . " (name, email, password) VALUES (:name, :email, :password)";
+        $sql = "INSERT INTO " . static::getTableName() . " (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)";
 
-        $records = self::$db->query($sql, [":name" => $name, ":email" => $email, ":password" => $hashedPassword]);
+        $records = self::$db->query($sql, [":first_name" => $first_name, ":last_name" => $last_name, ":email" => $email, ":password" => $hashedPassword]);
         return $records;
 
     }
@@ -90,9 +90,10 @@ abstract class Model
     {
         self::init();
 
-        $sql = "UPDATE " . static::getTableName() . " SET name = :name, email = :email, roles = :roles WHERE id = :id";
+        $sql = "UPDATE " . static::getTableName() . " SET first_name = :first_name, last_name = :last_name, email = :email, roles = :roles WHERE id = :id";
 
-        $records = self::$db->query($sql, [":name" => $data["name"], ":email" => $data["email"], ":roles" => $data["roles"], ":id" => $id]);
+        $records = self::$db->query($sql, [":first_name" => $data["first_name"], ":last_name" => $data["last_name"], ":email" => $data["email"], ":roles" => $data["roles"], ":id" => $id]);
+
         return $records;
         ;
     }
