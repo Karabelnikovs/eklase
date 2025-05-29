@@ -116,7 +116,6 @@ class UsersController
             $errors['grade'] = "Grade is required";
         if (!is_numeric($grade) || $grade < 0 || $grade > 100)
             $errors['grade'] = "Grade must be a number between 0 and 100";
-        file_put_contents('debug.log', "all good()\n", FILE_APPEND);
 
         if (empty($errors)) {
             // Check student exists
