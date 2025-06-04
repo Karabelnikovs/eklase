@@ -132,24 +132,24 @@
                                         class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Home</a>
                                 </li>
                                 <?php if (Validator::Role('Teacher') || Validator::Role('Admin')): ?>
-                                    <li class="group relative">
-                                        <a href="/students" role="menuitem"
-                                            class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Students</a>
-                                    </li>
-                                    <li class="group relative">
-                                        <a href="/grades" role="menuitem"
-                                            class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Grades</a>
-                                    </li>
-                                    <li class="group relative">
-                                        <a href="/subjects" role="menuitem"
-                                            class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Subjects</a>
+                                <li class="group relative">
+                                    <a href="/students" role="menuitem"
+                                        class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Students</a>
+                                </li>
+                                <li class="group relative">
+                                    <a href="/grades" role="menuitem"
+                                        class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Grades</a>
+                                </li>
+                                <li class="group relative">
+                                    <a href="/subjects" role="menuitem"
+                                        class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">Subjects</a>
                                     <?php endif; ?>
                                     <?php if (Validator::Role('Student')): ?>
-                                    <li class="group relative">
-                                        <a href="/my-grades" role="menuitem"
-                                            class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">My
-                                            Grades</a>
-                                    </li>
+                                <li class="group relative">
+                                    <a href="/my-grades" role="menuitem"
+                                        class=" mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 ">My
+                                        Grades</a>
+                                </li>
                                 <?php endif; ?>
                                 <li class="group relative">
                                     <a href="/profile" role="menuitem"
@@ -245,7 +245,7 @@
                         </a>
 
                         <p class="mb-8 text-body-dark-11">
-                            Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
+                            yoyo
                         </p>
 
                         <div class="-mx-3 flex items-center">
@@ -359,59 +359,59 @@
 
     <script src="./assets/js/main.js"></script>
     <script>
-        // Scroll Reveal
-        const sr = ScrollReveal({
-            origin: "bottom",
-            distance: "16px",
-            duration: 1000,
-            reset: false,
-        });
+    // Scroll Reveal
+    const sr = ScrollReveal({
+        origin: "bottom",
+        distance: "16px",
+        duration: 1000,
+        reset: false,
+    });
 
-        sr.reveal(`.scroll-revealed`, {
-            cleanup: true,
-        });
+    sr.reveal(`.scroll-revealed`, {
+        cleanup: true,
+    });
 
-        // GLightBox
-        GLightbox({
-            selector: ".video-popup",
-            href: "https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM",
-            type: "video",
-            source: "youtube",
-            width: 900,
-            autoplayVideos: true,
-        });
+    // GLightBox
+    GLightbox({
+        selector: ".video-popup",
+        href: "https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM",
+        type: "video",
+        source: "youtube",
+        width: 900,
+        autoplayVideos: true,
+    });
 
-        const myGallery3 = GLightbox({
-            selector: ".portfolio-box",
-            type: "image",
-            width: 900,
-        });
+    const myGallery3 = GLightbox({
+        selector: ".portfolio-box",
+        type: "image",
+        width: 900,
+    });
 
-        // Testimonial
-        const testimonialSwiper = new Swiper(".testimonial-carousel", {
-            slidesPerView: 1,
-            spaceBetween: 30,
+    // Testimonial
+    const testimonialSwiper = new Swiper(".testimonial-carousel", {
+        slidesPerView: 1,
+        spaceBetween: 30,
 
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 30,
             },
-
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-                1280: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
             },
-        });
+            1280: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
     </script>
 </body>
 

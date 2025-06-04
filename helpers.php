@@ -9,7 +9,7 @@ function view($template, $data = [])
     require "views/$template.view.php";
     $content = ob_get_clean();
 
-    require "views\layout.php";
+    require "views/layout.php";
 }
 
 
